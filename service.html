@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <link id="pagestyle" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <script>
+        if (localStorage.getItem("style") == null) {
+            localStorage.setItem("style", "style0.css");
+            console.log("style000");
+        }
+        document.getElementById("pagestyle").setAttribute("href", localStorage.getItem("style"));
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        function myFunction() {
+            if ((document.getElementById("pagestyle").href).slice(-10) == "style0.css") {
+                document.getElementById("pagestyle").setAttribute("href", "style1.css");
+                localStorage.setItem("style", "style1.css");
+            }
+            else {
+                document.getElementById("pagestyle").setAttribute("href", "style0.css");
+                localStorage.setItem("style", "style0.css");
+            }
+        }
+    </script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <nav class="navbar1">
+        <div class="max-width">
+            <div class="logo" style="cursor: pointer;"><p onclick=myFunction()>AP</p></div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="qualifications.html">Qualifications</a></li>
+                <li><a href="service.html">Service</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <section class="background" id="service" style="flex-direction: column;">
+        <h1 style="text-align: center; margin-top: 125px; font-size: 50px;">Service</h1>
+        <div class="service-content">
+            <div class="card mb-3" style="max-width: 50%; background-color: transparent; border:none; margin-top: 75px; margin-left:25%;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="resources/clothedByFaith.jpg" class="img-fluid" style="width:70%; margin: 30px;"/>
+                    </div>
+                    <div class="col-md-8" style="text-align: center; padding: 20px 20px 20px 20px;">
+                        <div class="card-body">
+                        <h4 class="card-title"><b>Clothed by Faith</b></h4>
+                        <p class="card-text" style="padding: 20px 20px 20px 20px;">
+                            Regularly volunteered at this non profit organization that collected, washed, sorted and redistributed gently used clothes and shoes to those in need.
+                        </p>
+                        <p><a href="https://www.clothedbyfaith.org/" target="_blank">Website</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3" style="max-width: 50%; background-color: transparent; border:none; margin-top: 75px; margin-left:25%;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="resources/harvey.png" class="img-fluid" style="width:70%; margin: 10px 0px 0px 30px;" />
+                    </div>
+                    <div class="col-md-8" style="text-align: center; padding: 20px 20px 20px 20px;">
+                        <div class="card-body">
+                        <h4 class="card-title"><b>Aftermath of Hurricane Harvey</b></h4>
+                        <p class="card-text" style="padding: 20px 20px 20px 20px;">
+                            Assisted several families, in the community, in the aftermath of <a href="https://en.wikipedia.org/wiki/Hurricane_Harvey" target="_blank">Hurricane Harvey</a>. Anything they needed help with, including but not limited to tearing out damaged 
+                            carpets or flooring, demolishing walls, moving furniture, and collecting debris.
+                        </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3" style="max-width: 50%; background-color: transparent; border:none; margin-top: 75px; margin-left:25%; padding-bottom: 40px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="resources/tutor.jpg" class="img-fluid" style="width: 90%; margin-left: 10px;" />
+                    </div>
+                    <div class="col-md-8" style="text-align: center; padding: 20px 20px 20px 20px;">
+                        <div class="card-body">
+                        <h4 class="card-title"><b>Tutoring</b></h4>
+                        <p class="card-text" style="padding: 20px 20px 20px 20px;">
+                            Tutored a classmate in Pre-Calculus at my <a href="https://www.katyisd.org/campus/THS/Pages/default.aspx" target="_blank">high school</a>.
+                        </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>

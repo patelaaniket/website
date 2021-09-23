@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <link id="pagestyle" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <script>
+        if (localStorage.getItem("style") == null) {
+            localStorage.setItem("style", "style0.css");
+            console.log("style000");
+        }
+        document.getElementById("pagestyle").setAttribute("href", localStorage.getItem("style"));
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        function myFunction() {
+            if ((document.getElementById("pagestyle").href).slice(-10) == "style0.css") {
+                document.getElementById("pagestyle").setAttribute("href", "style1.css");
+                localStorage.setItem("style", "style1.css");
+            }
+            else {
+                document.getElementById("pagestyle").setAttribute("href", "style0.css");
+                localStorage.setItem("style", "style0.css");
+            }
+        }
+    </script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <nav class="navbar1">
+        <div class="max-width">
+            <div class="logo" style="cursor: pointer;"><p onclick=myFunction()>AP</p></div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="qualifications.html">Qualifications</a></li>
+                <li><a href="service.html">Service</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <section class="background" id="portfolio" style="flex-direction: column;">
+        <h1 style="text-align: center; margin-top: 125px; font-size: 50px;">Portfolio</h1>
+        <div class="portfolio-content">
+            <div class="card mb-3" style="max-width: 50%; background-color: transparent; border:none; margin-top: 75px; margin-left:25%;">
+                <div class="row g-0">
+                    <div class="col-md-4" style="" >
+                        <img src="resources/microscope.png" class="img-fluid" style="width:70%; margin: 30px;"/>
+                    </div>
+                    <div class="col-md-8" style="text-align: center; padding: 20px 20px 20px 20px;">
+                        <div class="card-body">
+                        <h4 class="card-title"><b>Automated Strain Analysis using TEM Diffraction Data</b></h4>
+                        <p class="card-text" style="padding: 20px 20px 20px 20px;">
+                            Worked in a small team to create an automated program in python to generate strain maps using 
+                            <a href="https://en.wikipedia.org/wiki/Transmission_electron_microscopy" target="_blank">TEM diffraction data</a>. 
+                            Experimented with different linear and non-linear image filters and their effect on the accuracy of strain maps.
+                            I also create a themed GUI for ease of navigation. Publication currently in works.
+                        </p>
+                        <p><a href="https://github.com/patelaaniket/electronMicroscopy" target="_blank">Github</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3" style="max-width: 50%; background-color: transparent; border:none; margin-top: 75px; margin-left:25%;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="resources/website.png" class="img-fluid" style="width:70%; margin: 10px 0px 0px 30px;" />
+                    </div>
+                    <div class="col-md-8" style="text-align: center; padding: 20px 20px 20px 20px;">
+                        <div class="card-body">
+                        <h4 class="card-title"><b>Personal Website</b></h4>
+                        <p class="card-text" style="padding: 20px 20px 20px 20px;">
+                            Created a professional looking personal website using HTML, CSS, JavaScript from scratch. The website you are currently on.
+                        </p>
+                        <p><a href="https://github.tamu.edu/patelaaniket/CSCE315Lab" target="_blank">Github</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3" style="max-width: 50%; background-color: transparent; border:none; margin-top: 75px; margin-left:25%;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="resources/emotion.png" class="img-fluid" style="width: 90%; margin-left: 10px;" />
+                    </div>
+                    <div class="col-md-8" style="text-align: center; padding: 20px 20px 20px 20px;">
+                        <div class="card-body">
+                        <h4 class="card-title"><b>Facial Expression Recognition</b></h4>
+                        <p class="card-text" style="padding: 20px 20px 20px 20px;">
+                            Through guidance from Coursera, created a convolutional neural network in python that recognizes 7
+                            different facial expressions in real time video streams.
+                            Created a web interface for the trained model using Flask
+                        </p>
+                        <p><a href="https://github.com/patelaaniket/facialRecognition" target="_blank">Github</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>

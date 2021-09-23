@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <link id="pagestyle" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <script>
+        if (localStorage.getItem("style") == null) {
+            localStorage.setItem("style", "style0.css");
+            console.log("style000");
+        }
+        document.getElementById("pagestyle").setAttribute("href", localStorage.getItem("style"));
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        function myFunction() {
+            if ((document.getElementById("pagestyle").href).slice(-10) == "style0.css") {
+                document.getElementById("pagestyle").setAttribute("href", "style1.css");
+                localStorage.setItem("style", "style1.css");
+            }
+            else {
+                document.getElementById("pagestyle").setAttribute("href", "style0.css");
+                localStorage.setItem("style", "style0.css");
+            }
+        }
+    </script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <nav class="navbar1">
+        <div class="max-width">
+            <div class="logo" style="cursor: pointer;"><p onclick=myFunction()>AP</p></div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="qualifications.html">Qualifications</a></li>
+                <li><a href="service.html">Service</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    
+    <section class="background" id="qualifications" style="flex-direction: column;">
+        <h1 style="text-align: center; margin-top: 125px; font-size: 50px;">Qualifications</h1>
+        <div class="max-width">
+            <div class="one">
+                <h5 style="margin-right:1%; margin-top: 25px; padding-bottom: 25px;"><a href="resources/College Resume.pdf" target="_blank">Resume Download</a></h5>
+                <!-- <img src="resources/resumesPicture.png" align="center" style="padding-top: 25px; padding-bottom: 50px; width:100%"> -->
+                <iframe src="https://drive.google.com/file/d/1IFCnYkQpClcQgziFjZnRgxx7aNOqwOhw/preview" width="600" height="760" allow="autoplay"></iframe>
+            </div>
+            <div class="two" style="text-align: center; margin-top: 25px; padding-right: 55%;">
+                <h4>Technical Skills</h4>
+                <p style="margin-top: 25px; margin-bottom: 50px;">
+                    My most proficient language is Python, having used it the most for projects and research. The “Automated Strain Analysis using TEM Diffraction Data” 
+                    and “Facial Expression Recognition” projects from my Portfolio page are prime examples of this. Other languages I am well-versed in are Java and C++. 
+                    Java being the first programming language I learned in high school, and C++ being the introductory language they teach at Texas A&M, I have extensive 
+                    experience using these languages, especially to complete assignments. I have used Java mostly in the context of competitive coding competitions and for 
+                    multi-threading programs. C++ on the other hand has been used exclusively for <a href="https://github.com/patelaaniket/csce221" target="_blank">class assignments</a>, 
+                    mostly dealing with pointers and memory management. I also have experience with HTML, CSS, and JavaScript as seen by this website you are currently 
+                    browsing, and some experience with Haskell and C.  As part of a class assignment we created a parser for the programming language W, a simple custom 
+                    programming language built for this assignment, using Haskell. Another class assignment, <a href="https://www.nand2tetris.org/" target="_blank">nand2tetris</a>, required
+                     the use of HDL. Having dual-booted Ubuntu on my laptop, I am familiar with Windows and Linux operating systems.  
+                </p>
+                <h4>Technical Areas of Interest</h4>
+                <p style="margin-top: 25px">
+                    Ever since I took my first computer science class in tenth grade, I have been fascinated with this subject. I knew right away I wanted to pursue a career 
+                    in this field, but was unaware of all the different focus areas. Now that I have more experience in the subject, I can say that my interests lie at the 
+                    intersection of robotics and artificial intelligence. Autonomous vehicles, robots and computer vision is something I would like to learn more of and work 
+                    with. I am also interested in software and program development in general. Please use the information in my resume to contact me if needed. Email would be 
+                    the most convenient for me. 
+                </p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

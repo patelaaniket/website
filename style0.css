@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;500;700&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.max-width {
+    max-width: 1920px;
+    padding: 0 80px;
+}
+/* colours: DDDDDD, 222831, 30475E, F05454 */
+/* navbar1 */
+.navbar1 {
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    padding: 30px 0;
+    font-family: 'Azeret Mono', sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar1.sticky {
+    padding: 10px 0px 0px 0px;
+    background: #222831;
+}
+.navbar1 .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar1 .logo {
+    color: #DDDDDD;
+    font-size: 35px;
+    font-weight: 600;
+    color: #F05454;
+}
+.navbar1 .menu li {
+    list-style: none;
+    display: inline-block;
+}
+.navbar1 .menu li a {
+    color: #DDDDDD;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar1 .menu li a:hover {
+    color: #F05454;
+}
+
+/* background */
+.background {
+    display: flex;
+    background: url("resources/background.jpg") no-repeat center;
+    color: #DDDDDD;
+    min-height: 500px;
+    background-size: cover;
+    background-position: 100% 100%;
+    background-attachment: fixed;
+    font-family: 'Azeret Mono', sans-serif;
+    overflow-y: scroll;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* home */
+.background .max-width {
+    margin: auto 0 auto 40px;
+}
+.background .home-content .text-1 {
+    font-size: 27px;
+}
+.background .home-content .text-2 {
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.background a {
+    color: #DDDDDD;
+    text-decoration: underline;
+}
+
+/* portfolio */
+.background .portfolio-content .text-1 {
+    font-size: 27px;
+    font-weight: 600;
+    text-align: center;
+    padding: 0;
+}
+
+/* qualifications */
+.background .qualifications-content .text-1 {
+    font-size: 27px;
+    font-weight: 600;
+    text-align: center;
+    padding: 0;
+}
+.one {
+    width: 50%;
+    background: transparent;
+    float: right;
+    text-align: center;
+}
+.two {
+    margin-right: 20px;
+    background: transparent;
+}
+
+/* service */
+.background .service-content .text-1 {
+    font-size: 27px;
+    font-weight: 600;
+    text-align: center;
+    padding: 0;
+}
